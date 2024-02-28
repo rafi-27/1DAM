@@ -1,0 +1,9 @@
+10 PRINT "Ingrese el primer número:";
+20 INPUT A
+30 PRINT "Ingrese el segundo número:";
+40 INPUT B
+50 LET SUMA = A + B
+60 LET PRODUCTO = A * B
+70 PRINT "La suma es: "; SUMA
+80 PRINT "El producto es: "; PRODUCTO
+90 END
