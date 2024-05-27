@@ -1,0 +1,30 @@
+@startuml Asosiacion
+
+Persona "1" <-- "1" Socio: Una_Persona_Un_CodigoSocio
+Socio "1" <-- "N" Fecha
+Persona "1" <-- "N" Fecha
+Persona "1" <-- "1" Nif
+
+
+class Persona{
+    - NIF: Nif
+    - String NombreCompleto
+    - fechaNacimiento: Fecha
+}
+
+class Socio{
+    - CodigoAsociado: String
+    - fechaAlta: Fecha 
+}
+
+class Fecha {
+  - dia: int
+  - mes: int
+  - año: int
+}  
+
+class Nif{
+    dni: String
+    caracter: char
+}
+

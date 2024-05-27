@@ -1,0 +1,28 @@
+@startuml ejemplo
+
+' {abstract} class cliente{
+'     + String nombre
+'     # String DNI
+'     - int edad
+'     + mostrarDatos()
+'     + getNombre()
+'     + getDni()
+' }
+
+skinparam classAttributeIconSize 0
+class Personaje{
+ - nombre:String
+ - velocidad:int
+ - fuerza:int
+ + Personaje()
+ + andar( int direccion )
+ + {abstract} parar()
+ + saltar()
+}
+enum Arma{
+ MARTILLO,
+ ESPADA,
+ PUÑAL,
+ ESCUDO
+}
+@enduml
