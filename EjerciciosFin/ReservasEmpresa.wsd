@@ -1,0 +1,37 @@
+@startuml ReservasEmpresa
+
+class Cliente {
+  +DNI: String
+  +nombre: String
+  +dirección: String
+  +teléfono: String
+  +codUno: String
+  +codDos: String
+  +avalado: Cliente
+}
+
+class Reserva {
+  +fechaDeInicio: Date
+  +fechaDeReserva: Date
+  +precioTotal: Double
+  +entrega: Boolean
+  +gasolina: Double
+}
+
+class Coche {
+  +matrícula: String
+  +modelo: String
+  +color: String
+  +marca: String
+  +alquilerP: Double
+}
+
+class Garaje {
+  +nombre: String
+  +ubicación: String
+}
+
+Cliente "1" -- "0 o N" Reserva
+Reserva "1" -- "1" Coche
+Cliente "1" -- "1" Garaje
+Garaje "1" -- "0 o N" Cliente
